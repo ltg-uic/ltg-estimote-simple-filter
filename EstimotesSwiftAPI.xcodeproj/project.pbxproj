@@ -13,6 +13,12 @@
 		77F9B963194907E7007E5364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F9B961194907E7007E5364 /* Main.storyboard */; };
 		77F9B965194907E7007E5364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F9B964194907E7007E5364 /* Images.xcassets */; };
 		77F9B971194907E7007E5364 /* EstimotesSwiftAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9B970194907E7007E5364 /* EstimotesSwiftAPITests.swift */; };
+		77F9B97E19490AC7007E5364 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F9B97D19490AC7007E5364 /* Beacon.swift */; };
+		77F9B98019490B2C007E5364 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F9B97F19490B2C007E5364 /* CoreLocation.framework */; };
+		77F9B98219490B39007E5364 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F9B98119490B39007E5364 /* SystemConfiguration.framework */; };
+		77F9B98419490B3F007E5364 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F9B98319490B3F007E5364 /* CoreBluetooth.framework */; };
+		77F9B989194911F5007E5364 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F9B97B19490A85007E5364 /* libEstimoteSDK.a */; };
+		77F9B98A1949122E007E5364 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F9B98519490B5A007E5364 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,13 @@
 		77F9B96A194907E7007E5364 /* EstimotesSwiftAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EstimotesSwiftAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F9B96F194907E7007E5364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F9B970194907E7007E5364 /* EstimotesSwiftAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimotesSwiftAPITests.swift; sourceTree = "<group>"; };
+		77F9B97A1949093D007E5364 /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "App-Bridging-Header.h"; path = "../App-Bridging-Header.h"; sourceTree = "<group>"; };
+		77F9B97B19490A85007E5364 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		77F9B97D19490AC7007E5364 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		77F9B97F19490B2C007E5364 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		77F9B98119490B39007E5364 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		77F9B98319490B3F007E5364 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		77F9B98519490B5A007E5364 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +56,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F9B989194911F5007E5364 /* libEstimoteSDK.a in Frameworks */,
+				77F9B98A1949122E007E5364 /* Foundation.framework in Frameworks */,
+				77F9B98419490B3F007E5364 /* CoreBluetooth.framework in Frameworks */,
+				77F9B98219490B39007E5364 /* SystemConfiguration.framework in Frameworks */,
+				77F9B98019490B2C007E5364 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,11 @@
 		77F9B94C194907E7007E5364 = {
 			isa = PBXGroup;
 			children = (
+				77F9B98519490B5A007E5364 /* Foundation.framework */,
+				77F9B98319490B3F007E5364 /* CoreBluetooth.framework */,
+				77F9B98119490B39007E5364 /* SystemConfiguration.framework */,
+				77F9B97F19490B2C007E5364 /* CoreLocation.framework */,
+				77F9B97B19490A85007E5364 /* libEstimoteSDK.a */,
 				77F9B957194907E7007E5364 /* EstimotesSwiftAPI */,
 				77F9B96D194907E7007E5364 /* EstimotesSwiftAPITests */,
 				77F9B956194907E7007E5364 /* Products */,
@@ -77,12 +100,14 @@
 		77F9B957194907E7007E5364 /* EstimotesSwiftAPI */ = {
 			isa = PBXGroup;
 			children = (
+				77F9B97A1949093D007E5364 /* App-Bridging-Header.h */,
 				77F9B95A194907E7007E5364 /* AppDelegate.swift */,
 				77F9B95F194907E7007E5364 /* ViewController.swift */,
 				77F9B961194907E7007E5364 /* Main.storyboard */,
 				77F9B964194907E7007E5364 /* Images.xcassets */,
 				77F9B95C194907E7007E5364 /* EstimotesSwiftAPI.xcdatamodeld */,
 				77F9B958194907E7007E5364 /* Supporting Files */,
+				77F9B97D19490AC7007E5364 /* Beacon.swift */,
 			);
 			path = EstimotesSwiftAPI;
 			sourceTree = "<group>";
@@ -161,6 +186,7 @@
 				TargetAttributes = {
 					77F9B954194907E7007E5364 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = F554V774C5;
 					};
 					77F9B969194907E7007E5364 = {
 						CreatedOnToolsVersion = 6.0;
@@ -214,6 +240,7 @@
 				77F9B960194907E7007E5364 /* ViewController.swift in Sources */,
 				77F9B95E194907E7007E5364 /* EstimotesSwiftAPI.xcdatamodeld in Sources */,
 				77F9B95B194907E7007E5364 /* AppDelegate.swift in Sources */,
+				77F9B97E19490AC7007E5364 /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +308,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/EstimoteSDK/Headers",
+					"$(inherited)",
+					"/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,9 +351,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/EstimoteSDK/Headers",
+					"$(inherited)",
+					"/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/App-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -331,9 +370,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EstimotesSwiftAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -342,9 +388,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EstimotesSwiftAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -403,6 +456,7 @@
 				77F9B976194907E7007E5364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77F9B977194907E7007E5364 /* Build configuration list for PBXNativeTarget "EstimotesSwiftAPITests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +465,7 @@
 				77F9B979194907E7007E5364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
